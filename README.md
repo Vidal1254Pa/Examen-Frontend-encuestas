@@ -1,9 +1,9 @@
-# AppInformesFrontEnd
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
 ## pre requisites
-`node 16.18.1`
+`node 19`
 `npm install --legacy-peer-deps`
 se usa https://github.com/chihab/ngx-env y https://github.com/kentcdodds/cross-env para leer las variables
 
