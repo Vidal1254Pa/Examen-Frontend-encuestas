@@ -1,0 +1,47 @@
+### Listado de BUs
+GET {{baseUrl}}/api/v1/bus HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener BU
+GET {{baseUrl}}/api/v1/bus/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Crear BU
+POST {{baseUrl}}/api/v1/bus HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Actualizar BU
+PUT {{baseUrl}}/api/v1/bus/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Eliminar BU
+DELETE {{baseUrl}}/api/v1/bus/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+

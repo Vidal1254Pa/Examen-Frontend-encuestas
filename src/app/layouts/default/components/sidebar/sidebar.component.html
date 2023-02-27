@@ -1,0 +1,9 @@
+<!--begin::sidebar menu-->
+<!--TODO: Por revisar-->
+<span class="d-none">{{dataMenu ? dataMenu.length : 'xx'}}</span>
+<ng-container *ngIf="dataMenu">
+  <app-sidebar-menu 
+    class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  </app-sidebar-menu>
+</ng-container>
+<!--end::sidebar menu-->

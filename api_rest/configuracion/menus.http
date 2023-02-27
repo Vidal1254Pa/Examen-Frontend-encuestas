@@ -1,0 +1,4 @@
+### Listado de menus
+GET {{baseUrl}}/api/v1/menu HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}

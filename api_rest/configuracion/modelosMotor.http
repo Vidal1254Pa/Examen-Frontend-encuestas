@@ -1,0 +1,42 @@
+### Listado de modelos de motor
+GET {{baseUrl}}/api/v1/modelos-motor HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Crear modelo de motor
+POST {{baseUrl}}/api/v1/modelos-motor HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Actualizar modelo de motor
+PUT {{baseUrl}}/api/v1/modelos-motor/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Eliminar modelo de motor
+DELETE {{baseUrl}}/api/v1/modelos-motor/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+

@@ -1,0 +1,345 @@
+### Crear informe
+POST {{baseUrl}}/api/v1/report HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+{
+    "Codigo": "PRUEBA_64",
+    "Plantilla_Codigo": "COD_VER_0         ",
+    "Plantilla_Version": "1",
+    "NroOrdenServicio": "SV01",
+    "FechaInspeccion": "2020-10-30",
+    "Tecnico_Id": 1,
+    "AsistenteEquipo_Id": 19,
+    "SupervisorServicio_Id": "3",
+    "AnalistaDanioMerma_Id": 2,
+    "Planner_Id": 3,
+    "Cliente_CodigoSAP": "0002009701",
+    "Proyecto_Id": 1,
+    "ModeloEquipo_Id": "7",
+    "ModeloMotor": "XCD1.5 EcoBoost (Ford)",
+    "HorometroEquipo": "1000",
+    "SerieEquipo": "XCD1.5 EcoBoost (Ford)",
+    "SerieMotor": "001PC450",
+    "FechaCreacion": "2020-10-30",
+    "CreadoPor": "JPEREZ",
+    "Estado_Id": 1,
+    "secciones": [
+        {
+            "titulo": "Prueba registro",
+            "editable_title_state": true,
+            "orden": 1,
+            "SeccionContenedor": [
+                {
+                    "nroColumnas": 2,
+                    "nroFilas": 2,
+                    "tablaDetalle": [
+                        {
+                            "tipoCelda": "th",
+                            "orden": 1,
+                            "checkedClass": "",
+                            "ubicacionCelda": "0-0-0",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 49,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "Validez",
+                                "controlId": "label",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "th",
+                            "orden": 1,
+                            "ubicacionCelda": "0-0-1",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 50,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "Descripcion",
+                                "controlId": "label",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "td",
+                            "orden": 1,
+                            "ubicacionCelda": "0-1-0",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 51,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "true",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:radio",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "1",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "td",
+                            "orden": 1,
+                            "ubicacionCelda": "0-1-1",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 52,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "Registro",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:text",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "input",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        }
+                    ],
+                    "tipoContenedor": {
+                        "id": 1
+                    }
+                }
+            ]
+        },
+        {
+            "titulo": "Título de la sección",
+            "editable_title_state": true,
+            "orden": 2,
+            "SeccionContenedor": [
+                {
+                    "nroColumnas": 2,
+                    "nroFilas": 2,
+                    "tablaDetalle": [
+                        {
+                            "tipoCelda": "th",
+                            "orden": 1,
+                            "checkedClass": "",
+                            "ubicacionCelda": "1-0-0",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 53,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:file",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "th",
+                            "orden": 1,
+                            "ubicacionCelda": "1-0-1",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 54,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:file",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "td",
+                            "orden": 1,
+                            "ubicacionCelda": "1-1-0",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 55,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:file",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        },
+                        {
+                            "tipoCelda": "td",
+                            "orden": 1,
+                            "ubicacionCelda": "1-1-1",
+                            "titulo": "",
+                            "colorFondo": "       ",
+                            "colorLetra": "       ",
+                            "control": {
+                                "id": 56,
+                                "typeId": "",
+                                "opciones": [
+                                    {
+                                        "id": 0,
+                                        "label": "",
+                                        "value": "",
+                                        "selected": true
+                                    }
+                                ],
+                                "label": "",
+                                "controlId": "input:file",
+                                "typeAlias": "",
+                                "controlName": "",
+                                "placeholder": "",
+                                "defaultValue": "",
+                                "maxValue": 0,
+                                "minValue": 0,
+                                "cols": 0,
+                                "controlDefaultValue": "",
+                                "rows": 0,
+                                "required": false,
+                                "showLabel": false
+                            }
+                        }
+                    ],
+                    "tipoContenedor": {
+                        "id": 1
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+### Buscar informe
+GET {{baseUrl}}/api/v1/report/search?page=3&size=3&search= HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer {{token}}
+
+### Guardar imagen de informe
+POST {{baseUrl}}/api/v1/report/CODIGOPRUEBA4/imagen HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Bearer {{token}}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="Imagen"; filename="imagen.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\user\Desktop\imagen.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

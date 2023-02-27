@@ -1,0 +1,53 @@
+### Listado de usuarios
+GET {{baseUrl}}/api/v1/users HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener usuario
+GET {{baseUrl}}/api/v1/usuarios/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener avatar usuario
+GET {{baseUrl}}/api/v1/users/me/avatar HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener firma usuario
+GET {{baseUrl}}/api/v1/users/me/firma HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener huella usuario
+GET {{baseUrl}}/api/v1/users/me/huella HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### actualizar avatar usuario
+PUT {{baseUrl}}/api/v1/users/me/avatar HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Bearer {{token}}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="Imagen"; filename="firma01.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\user\Desktop\firma01.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### actualizar firma usuario
+PUT {{baseUrl}}/api/v1/users/me/firma HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Bearer {{token}}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="Imagen"; filename="firma01.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\user\Desktop\firma01.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### actualizar huella usuario
+PUT {{baseUrl}}/api/v1/users/me/huella HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}

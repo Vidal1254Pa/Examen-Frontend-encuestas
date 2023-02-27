@@ -1,0 +1,47 @@
+### Listado de modelos de equipo
+GET {{baseUrl}}/api/v1/modelos-equipo HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Obtener modelo de equipo
+GET {{baseUrl}}/api/v1/modelos-equipo/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Crear modelo de equipo
+POST {{baseUrl}}/api/v1/modelos-equipo HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Actualizar modelo de equipo
+PUT {{baseUrl}}/api/v1/modelos-equipo/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "estado": true,
+  "fechaCreacion": "2022-09-27T00:58:48.324Z",
+  "creadoPor": "string",
+  "fechaModificacion": "2022-09-27T00:58:48.324Z",
+  "modificadoPor": "string"
+}
+
+### Eliminar modelo de equipo
+DELETE {{baseUrl}}/api/v1/modelos-equipo/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+

@@ -1,0 +1,21 @@
+//
+// Theme style
+//
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Initialize
+@import "init";
+
+// Components
+@import "./core/components/components";
+@import "components/components";
+
+// Layout
+@import "./core/layout/base/layout";
+@import "layout/layout";
+@import "extend";
+
+// Fonts
+@import "../assets/plugins/font-awesome/css/all.css";

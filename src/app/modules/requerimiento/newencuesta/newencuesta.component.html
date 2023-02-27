@@ -1,0 +1,94 @@
+<div class="card card-flush">
+    <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+      <div class="card-title w-100 w-lg-350px">
+        <div class="input-group d-none">
+          <input class="form-control" type="text" placeholder="Buscar...">
+          <button class="btn btn-secondary" type="button"><span class="svg-icon svg-icon-1"><i class="fa fa-search"></i></span></button>
+        </div>
+      </div>
+      <div class="card-toolbar">
+        <button class="btn btn-secondary text-primary" (click)="new()" type="button">
+          <i class="fa fa-file-alt text-primary"></i> Nuevo Registro
+        </button>
+      </div>
+    </div>
+    <div class="card-body pt-0">
+      <div class="table-responsive">
+        <table class="table table-head-custom table-head-bg table-row-dashed table-vertical-center">
+          <thead>
+            <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0 bg-light-dark">
+              <th class="align-middle text-center">N°</th>
+              <th class="align-middle">Nombre Completo</th>
+              <th class="align-middle">Lugar/Sucursal</th>
+              <th class="align-middle">OPCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let regimen of paginationInfo.records; index as i">
+              <td class="text-center">{{ i + 1  }}</td>
+              <td>{{ regimen.encuestado_Nombre }}</td>
+              <td>{{ regimen.sucursal_Nombre }}</td>
+              <td class="text-center">
+                <button class="btn btn-icon btn-light-twitter btn-sm me-2" (click)="findById(regimen.id)" title="Editar" type="button">
+                  <i class="fa fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content kt-modal-content kt-modal-content--fit-top p-7 kt-bg-white">
+        <div class="kt-portlet kt-portlet--skin-light kt-portlet--fit">
+          <div class="kt-portlet__head kt-portlet__head--noborder">
+            <div class="kt-portlet__head-label">
+              <h3 class="kt-portlet__head-title kt-portlet__head-title--md text-center text-primary">Ingresar Encuesta</h3>
+            </div>
+          </div>
+          <form [formGroup]="form">
+            <div class="kt-portlet__body">
+                <div class="form-group row">
+                  <div class="col-lg-6 mt-4">
+                    <label class="text-muted">Encuestado</label><span class="text-danger"> *</span>
+                    <select class="form-select" formControlName="encuestado_Id">
+                        <option value="0" disabled selected>--Seleccione--</option>
+                        <option [value]="item.ci" *ngFor="let item of listEncuestado">{{item.nombre_Completo}}</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 mt-4">
+                    <label class="text-muted">Sucursal</label><span class="text-danger"> *</span>
+                    <select class="form-select" formControlName="sucursal_Id">
+                        <option value="0" disabled selected>--Seleccione--</option>
+                        <option [value]="item.id" *ngFor="let item of listSucursal">{{item.nombre}}</option>
+                    </select>
+                  </div>
+                  <h3 class="mt-5 kt-portlet__head-title kt-portlet__head-title--md text-center text-primary">Encuesta</h3>
+                  <div class="col-lg-6 mt-4" *ngFor="let item of listPreguntas;index as i">
+                    <label class="text-muted">{{i+1}}.{{item.pregunta}}</label><span class="text-danger"> *</span>
+                    <select id="{{item.id}}" *ngIf="item.escala.detalle=='SI/NO'" class="form-select">
+                        <option value="0" disabled selected>--Seleccione--</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                    <input id="{{item.id}}" *ngIf="item.escala.detalle=='0-10'" class="form-control" type="number" min="0" max="10">
+                    <textarea id="{{item.id}}" *ngIf="item.escala.detalle=='ABIERTA'" class="form-control" name="" id="" cols="30" rows="7"></textarea>
+                  </div>
+                </div>
+  
+            </div>
+            <div class="kt-portlet__foot mt-5">
+              <div class="kt-form__actions kt-form__actions--right text-end">
+                <button class="btn btn-sm btn-success me-2" (click)="save()" [disabled]="form.invalid"><i class="fa fa-check"></i>Guardar</button>
+                <button class="btn btn-sm btn-danger" type="button" data-bs-dismiss="modal"><i class="fa fa-times"></i>Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

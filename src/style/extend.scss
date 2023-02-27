@@ -1,0 +1,81 @@
+.svg-icon {
+    &.svg-icon-white svg g [fill] {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+      fill: #FFF;
+    }
+  
+    &.svg-icon-solid svg path {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+      fill: #ca2418;
+    }
+  
+    svg g [fill] {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+      fill: #B5B5C3;
+    }
+
+    // svg path {
+    //   -webkit-transition: fill 0.3s ease;
+    //   transition: fill 0.3s ease;
+    //   fill: #ca2418;
+    // }
+  }
+  
+  .app-sidebar-menu .menu > a.menu-item > .menu-link .menu-icon .svg-icon svg {
+    g [fill] {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+      fill: #B5B5C3;
+    }
+  
+    &:hover g [fill] {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+    }
+  }
+  
+  .aside-dark .menu .menu-item .menu-link .menu-icon .svg-icon svg g {
+    color: #B5B5C3;
+  }
+  
+  .app-sidebar-menu .menu > {
+    a.menu-item {
+      &.router-link-active > .menu-link .menu-icon .svg-icon svg g [fill], &:hover > .menu-link .menu-icon .svg-icon svg g [fill] {
+        -webkit-transition: fill 0.3s ease;
+        transition: fill 0.3s ease;
+        fill: #ca2418;
+      }
+      &.router-link-active > .menu-link .menu-icon .svg-icon svg [fill], &:hover > .menu-link .menu-icon .svg-icon svg {
+        -webkit-transition: fill 0.3s ease;
+        transition: fill 0.3s ease;
+        color: #ca2418;
+      }
+    }
+  
+    .menu-accordion {
+        &.router-link-active > .menu-link .menu-icon .svg-icon svg, &:hover > .menu-link .menu-icon .svg-icon svg {
+            -webkit-transition: fill 0.3s ease;
+            transition: fill 0.3s ease;
+            color: #ca2418;
+        }
+      }
+    // .menu-item {
+    //   &.router-link-active > .menu-link .menu-icon .svg-icon svg:hover g [fill], &:hover > .menu-link .menu-icon .svg-icon svg:hover g [fill] {
+    //     -webkit-transition: fill 0.3s ease;
+    //     transition: fill 0.3s ease;
+    //   }
+    // }
+  }
+
+  [data-kt-app-layout=dark-sidebar] .app-sidebar .menu .menu-item.here {
+    transition: color 0.2s ease;
+    background-color: #282828;
+    color: var(--kt-primary-inverse);
+}
+
+.logo-index {
+  height: 54px !important;
+}
